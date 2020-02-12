@@ -1,6 +1,7 @@
 import * as React from "react";
+import Layout from './Layout';
 
-interface Props { compiler: string; framework: string; }
+// interface Props { compiler: string; framework: string; }
 
 // 'HelloProps' describes the shape of props.
 // State is never set so we use the '{}' type.
@@ -13,11 +14,13 @@ interface Props { compiler: string; framework: string; }
 //     }
 // }
 
-export default function App(props: Props) {
+export default function App() {
     return(
-        // <div style={centerContent}>
-            <h1 style={centerContent}>Hello from {props.compiler} and {props.framework}!</h1>
-        // </div>
+        // <div >
+        <Layout />
+        
+            /* <h1 style={centerContent}>Hello from {props.compiler} and {props.framework}!</h1>
+        </div> */
     )
 }
 
@@ -40,9 +43,9 @@ export default function App(props: Props) {
 // }
 
 
-const centerContent: React.CSSProperties = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100vh'
-}
+// const centerContent: React.CSSProperties = {
+//     display: 'flex',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     height: '100vh'
+// }
