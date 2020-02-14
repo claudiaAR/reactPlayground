@@ -1,16 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 interface Props { 
     mainImg: string; 
     mainTitle: string; 
+    buttonHoverColor: string;
+    alt: string;
 }
 
+
 function SectionItem(props: Props) {
+
+    const [isHovering, setIsHovering] = useState(false)
+
     return(
+        <button style={isHovering ? {backgroundColor: props.buttonHoverColor} : undefined} onMouseOver={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
         <div style={imgFlex}>
-            <img style={image} src={props.mainImg} alt="nature image" />
+            <img style={image} src={props.mainImg} alt={props.alt}/>
             <h1 style={centerTitle}> {props.mainTitle} </h1>
         </div>
+        </button>
     )
 }
 
@@ -36,7 +44,9 @@ const image: React.CSSProperties = {
     width: '95vw',
     height: '29vh',
     objectFit: 'cover',
-    padding: '0.5rem'
+    margin: '0.5rem 0rem'
 }
+
+
 
 export default SectionItem
