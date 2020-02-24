@@ -1,3 +1,4 @@
+
 import React from "react";
 
 class MyButton extends React.Component {
@@ -8,9 +9,9 @@ class MyButton extends React.Component {
     this.buttonClicked = this.buttonClicked.bind(this);
   
   }
-  
-    state = {value: 0};
-    private buttonClicked(event:any) {
+
+      state = {value: 0};
+      private buttonClicked(event:any) {
       event.preventDefault();
       this.state = ({value :this.state.value+1});
     }
@@ -27,3 +28,6 @@ class MyButton extends React.Component {
   
  export default MyButton
   
+
+
+
