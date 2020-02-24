@@ -1,12 +1,15 @@
 import React from 'react'
 import Navbar from './Navbar'
 import Content from './Content'
+import MyButton from './MyButton'
 
 function Layout(){
     return(
         <div style={appTitle}>
-           <Navbar />
-           <Content />
+            <MyButton />
+            <Navbar />
+            <Content />
+         
         </div>
     )
 }
