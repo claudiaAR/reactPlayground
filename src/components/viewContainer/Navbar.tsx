@@ -11,4 +11,6 @@ function Navbar() {
 const appTitle: React.CSSProperties = {
    padding: '1rem 2rem'
 }
+
+
 export default Navbar

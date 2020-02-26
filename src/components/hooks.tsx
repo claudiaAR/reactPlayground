@@ -13,7 +13,11 @@ function SectionItem(props: Props) {
     const [isHovering, setIsHovering] = useState(false)
 
     return(
-        <button style={isHovering ? {backgroundColor: props.buttonHoverColor} : undefined} onMouseOver={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
+        <button
+            style={isHovering ? {backgroundColor: props.buttonHoverColor} : undefined}
+            onMouseOver={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
+        >
         <div style={imgFlex}>
             <img style={image} src={props.mainImg} alt={props.alt}/>
             <h1 style={centerTitle}> {props.mainTitle} </h1>

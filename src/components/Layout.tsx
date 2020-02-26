@@ -1,12 +1,12 @@
 import React from 'react'
-import Navbar from './Navbar'
+import Navbar from './viewContainer/Navbar'
 import Content from './Content'
-import MyButton from './MyButton'
+
+
 
 function Layout(){
     return(
         <div style={appTitle}>
-            <MyButton />
             <Navbar />
             <Content />
          
